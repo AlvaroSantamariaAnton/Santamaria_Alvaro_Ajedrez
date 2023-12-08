@@ -1,3 +1,27 @@
+"""
+Script de Ajedrez en Consola
+
+Este script implementa un simple ajedrez en consola.
+Utiliza un tablero bidimensional y caracteres Unicode para representar las piezas.
+El programa permite a un jugador mover piezas y guardar el historial del tablero en un archivo.
+
+Funciones Principales:
+- get_coordinates(posicion): Convierte la posición de ajedrez a índices de fila y columna.
+- print_board(tablero): Imprime el tablero en la consola.
+- save_board(tablero, nombre_archivo): Guarda el historial del tablero en un archivo de texto.
+- move_piece(tablero): Permite al jugador mover piezas en el tablero.
+
+En el bloque __main__:
+- Se define un tablero inicial con caracteres Unicode para simular piezas de ajedrez.
+- Se imprime el tablero inicial y se guarda en un archivo llamado "tablero.txt".
+- Se llama a la función move_piece para permitir al jugador realizar movimientos.
+
+Nota: El juego utiliza coordenadas de estilo algebraico (por ejemplo, 'A1', 'G7').
+Nota: Al mover una pieza, se guarda el nuevo tablero en el fichero tablero.txt, en ocasiones 
+el tablero printeado en el archivo no coincide con el que sale en consola, esto se debe a un problema entre
+los tabuladores y los caracteres Unicode que no he podido solucionar.
+"""
+
 def get_coordinates(posicion):
     # Convierte la posición en formato de ajedrez a índices de fila y columna
     columna = ord(posicion[0].upper()) - ord("A") + 1  # Convierte la letra a índice de columna
